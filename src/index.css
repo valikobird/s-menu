@@ -61,24 +61,28 @@ ul {
   align-items: center;
   padding: 3rem;
 
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
-    font-weight: 400;
-  }
+  .title {
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+      font-weight: 400;
+    }
 
-  .under {
-    background-color: var(--accent-color);
-    width: 7rem;
-    height: 4px;
-    margin-bottom: 1.5rem;
+    .under {
+      background-color: var(--accent-color);
+      width: 7rem;
+      height: 4px;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+    }
   }
 
   .buttonsContainer {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
 
     button {
       padding: 0.375rem 0.75rem;
@@ -93,21 +97,23 @@ ul {
   }
 
   .menuContainer {
-    max-width: 1120px;
+    max-width: 90vw;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
     align-items: start;
+    justify-items: center;
 
     .dish {
       background-color: white;
       border-radius: 4px;
+      max-width: 25rem;
 
       .img {
         width: 100%;
         display: block;
         object-fit: cover;
-        height: 240px;
+        height: 15rem;
         border-top-left-radius: 4px;
         border-top-right-radius: 4px;
       }
@@ -122,10 +128,10 @@ ul {
           gap: 0.5rem;
           margin-bottom: 1rem;
 
-          h5 {
+          .dishName {
             font-size: 1.25rem;
             font-weight: 500;
-            line-height: 1.25rem;
+            line-height: 1.5rem;
             letter-spacing: 1px;
           }
 
@@ -146,5 +152,17 @@ ul {
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menu .menuContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .menu .menuContainer {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

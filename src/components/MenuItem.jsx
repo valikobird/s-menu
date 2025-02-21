@@ -5,7 +5,7 @@ const MenuItem = ({ dish }) => {
       <img className='img' src={img} alt={title} />
       <div className='infoContainer'>
         <div className='titleContainer'>
-          <h5 className='title'>{title}</h5>
+          <h5 className='dishName'>{title}</h5>
           <span className='price'>${price}</span>
         </div>
         <p className='description'>{desc}</p>
